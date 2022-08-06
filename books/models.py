@@ -10,3 +10,6 @@ class Book(models.Model):
     author = models.ForeignKey(
         "authors.Autor", on_delete=models.CASCADE, related_name="books"
     )
+
+    def __str__(self):
+        return self.title

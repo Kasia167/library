@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 # Create your models here.
 class Autor(models.Model):
     imie = models.CharField(max_length=200)
@@ -10,7 +9,3 @@ class Autor(models.Model):
 
     def __str__(self):
         return f"{self.imie} {self.nazwisko}"
-
-
-
-

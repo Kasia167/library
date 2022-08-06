@@ -1,1 +1,10 @@
-Books details
+{% extends 'base.html' %}
+
+{% block content %}
+
+Books list
+
+<a href="{% url 'books:list' %}">Lista książek</a>
+
+
+{% endblock %}
