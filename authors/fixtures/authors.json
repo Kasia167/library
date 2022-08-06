@@ -1,0 +1,20 @@
+[
+{
+    "model": "authors.autor",
+    "pk": 1,
+    "fields": {
+        "imie": "Dawid",
+        "nazwisko": "m",
+        "wiek": null
+    }
+},
+{
+    "model": "authors.autor",
+    "pk": 2,
+    "fields": {
+        "imie": "Kasia",
+        "nazwisko": "k",
+        "wiek": null
+    }
+}
+]

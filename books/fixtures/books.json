@@ -1,0 +1,32 @@
+[
+{
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+        "title": "Harry 1",
+        "description": "bla bla",
+        "year": 1990,
+        "author": 1
+    }
+},
+{
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+        "title": "harry 2",
+        "description": "bla bala afsda",
+        "year": 2010,
+        "author": 1
+    }
+},
+{
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+        "title": "Harry 3",
+        "description": "fjkdshf",
+        "year": 2019,
+        "author": 2
+    }
+}
+]
