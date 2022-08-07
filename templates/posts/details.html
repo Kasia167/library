@@ -1,20 +1,17 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
 
 
-<form method="POST">
-    {% csrf_token %}
-    <p>
-        <label for="title">Tytuł</label>
-        <input type="text" id="title" name="title" value="{{post.title}}"/>
-    </p>
-    <p>
-        <label for="content">Treść</label>
-        <textarea id="content" name="content" placeholder="treść....">{{post.content}}</textarea>
-    </p>
-    <input type="submit" value="send">
-</form>
+<h1>{{ post.title }}</h1>
+<small>By: {{ post.author }}</small>
+<p>{{ post.content }}</p>
+
+{% if user == post.author %}
+{% include 'posts/includes/post_form.html' %}
+{% endif %}
+
+
+
 
 {% endblock %}

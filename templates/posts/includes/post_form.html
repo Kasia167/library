@@ -1,0 +1,12 @@
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        <label for="title">Tytuł</label>
+        <input type="text" id="title" name="title" value="{{ post.title }}" >
+    </p>
+    <p>
+        <label for="content">Treść</label>
+        <textarea id="content" name="content" placeholder="treść...." >{{ post.content }}</textarea>
+    </p>
+    <input type="submit" value="send">
+</form>
