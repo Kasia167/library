@@ -12,7 +12,13 @@
 
 {% if user.is_authenticated %}
 
-{% include 'posts/includes/post_form.html' %}
+<!--{% include 'posts/includes/post_form.html' %}-->
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Send">
+</form>
 
 {% endif %}
 {% endblock %}

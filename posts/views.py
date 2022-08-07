@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from posts.models import Post
+from posts.forms import AddPost
 
 
 def listview(request):
@@ -9,14 +10,14 @@ def listview(request):
     print(request.method)
     print(request.user)
     if request.method == "POST":
+        form = AddPost(request.POST)
+        if form.is_valid():
+            title = form.cleaned_data["title"]
+            content = form.cleaned_data["content"]
+            Post.objects.create(title=title, content=content, author=request.user)
 
-        title = request.POST.get("title")
-        content = request.POST.get("content")
-
-        Post.objects.create(title=title, content=content, author=request.user)
-        print(request.POST)
-
-    context = {"posts": posts}
+    form = AddPost()
+    context = {"posts": posts, "form": form}
     return render(request, "posts/list.html", context)
 
 

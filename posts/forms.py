@@ -1,6 +1,6 @@
 from django import forms
 
 
-class add_post(forms.Form):
+class AddPost(forms.Form):
     title = forms.CharField()
-    content = forms.Textarea()
+    content = forms.CharField(widget=forms.Textarea)
